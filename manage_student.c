@@ -102,7 +102,7 @@ void sort_by_id(info std[MAX]){//parameter is an array with 10 elements with inf
 	//Bubble sort in ascending order
 	for(i = 0; i < MAX - 1; i++){//Sort 8 times
 		for(j = 0; j < MAX - 1; j++){//Eachtime the element has the biggest data will go to the last
-									 //position
+				 	     //position
 			if(atoi(std[j].id) > atoi(std[j+1].id)){//atoi() convert string to integer, i.e: string 
 								//"123" will be converted to 123 integer.
 								//Compare 2 integers,if current id is bigger
@@ -119,9 +119,9 @@ void sort_by_average(info std[MAX]){//parameter is an array with 10 elements wit
 	//Bubble sort:
 	for(i = 0; i < MAX - 1; i++){//sort 8 times
 		for(j = 0; j < MAX - 1; j++){//eachtime, the element which has the smallest data will go
-									 //to the last position
+					     //to the last position
 			if(std[j].average < std[j+1].average)//compare average grade of current element with the
-												 //next element
+							     //next element
 				swap(&std[j],&std[j+1]);//if current grade is smaller than next grade, swap it
 		}//end inner for
 	}//end outter for
