@@ -63,7 +63,7 @@ int main(void){
 	printf("There are total: %d students\n",MAX);//print out total number of students
 	//Calculate the frequency of type A, B, C...(formula: frequency of type * 100/total)
 	printf(" A: %d%%\n B: %d%%\n C: %d%%\n D: %d%%\n F: %d%%\n",freg[0]*10,freg[1]*10,freg[2]*10,
-																freg[3]*10,freg[5]*10);
+								  freg[3]*10,freg[5]*10);
 }
 
 /*This function read data from file test.txt and store data in std array
@@ -76,13 +76,13 @@ void input(FILE* fp, info std[MAX]){
 	for(i = 0; i<MAX; i++){//count 10 times
 		fscanf(fp,"%s%s%d%d%d%d",std[i].id,std[i].name,&std[i].midterm,&std[i].final,
 				&std[i].practice,&std[i].homework);//eachtime read 1 line of data from test.txt and
-									//store it in the array with correspond data-type respectively
+						//store it in the array with correspond data-type respectively
 		std[i].average = average(std[i]);//calculate average grade by average() function and store
-										//the result in current std.average
+						//the result in current std.average
 		std[i].type = type(std[i].average);//determine type of student by type() and store result
 		freg[std[i].type - 65]++;//count the frequence. type of student is always A,B,C,D or F then 
-								 //std[i].type - 65 always equalize 0,1,2,3,4,5, base on type.
-								// (65 = A in ASCII)
+						//std[i].type - 65 always equalize 0,1,2,3,4,5, base on type.
+						// (65 = A in ASCII)
 	}//end for
 }//end function
 
@@ -92,7 +92,7 @@ void print(info std[MAX]){//paramater is an array with 10 elements and has info 
 	printf("ID\t\tName\t\tMidterm\t\tFinal\t\tPractice\tHomeWork\tAverage\t\tType\n\n");//print header
 	for(i = 0; i < MAX; i++){//print out all stored data from element 1st to 10th
 		printf("%-16s%-16s%-16d%-16d%-16d%-16d%-16d%-16c\n",std[i].id,std[i].name,std[i].midterm,
-						std[i].final,std[i].practice,std[i].homework,std[i].average,std[i].type);								
+				std[i].final,std[i].practice,std[i].homework,std[i].average,std[i].type);								
 	}//end for
 }//end function
 
@@ -104,9 +104,9 @@ void sort_by_id(info std[MAX]){//parameter is an array with 10 elements with inf
 		for(j = 0; j < MAX - 1; j++){//Eachtime the element has the biggest data will go to the last
 									 //position
 			if(atoi(std[j].id) > atoi(std[j+1].id)){//atoi() convert string to integer, i.e: string 
-													//"123" will be converted to 123 integer.
-													//Compare 2 integers,if current id is bigger
-													//than next id swap them
+								//"123" will be converted to 123 integer.
+								//Compare 2 integers,if current id is bigger
+								//than next id swap them
 				swap(&std[j],&std[j+1]);//Call swap function
 			}//end if
 		}//end inner for
