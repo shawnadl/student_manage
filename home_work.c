@@ -39,11 +39,11 @@ int main(void)
 	/*count the numbers of student*/
 	int num = count(fp);
 	
-	/*after counting, the pointer will point to the end of file so need to be reset the pointer
+	/*after counting, the pointer will point to the end of file so need resetting the pointer
 	to point to the first position of file.*/
 	fseek(fp,0,SEEK_SET);
 	
-	info std[num];//to save the memory source, The elements number of array, exactly, equal the
+	info std[num];//to save the memory source, The elements number of an array, exactly, equal the
 				//real number of students.
 	int choice;
 	int var = 1;//a counter to count how many times user give order.
