@@ -28,7 +28,7 @@ void add(FILE*);
 //main function
 int main(void)
 {	
-	FILE *fp = fopen("C:\\Users\\Administrator\\Desktop\\data structure\\listt.txt","r+");
+	FILE *fp = fopen("C:\\Users\\Administrator\\Desktop\\data structure\\list.txt","r+");
 	
 	/*If the file is invalid, tell user*/	
 	if(fp == NULL){
